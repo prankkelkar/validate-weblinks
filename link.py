@@ -3,8 +3,9 @@ import urllib.request
 import requests
 import validators
 import time
+import config
 
-html_page = urllib.request.urlopen("https://www.ibm.com/community/z/open-source-software/ ")
+html_page = urllib.request.urlopen(config.url)
 soup = BeautifulSoup(html_page, "html.parser")
 ls = set()
 for link in soup.findAll('a'):
