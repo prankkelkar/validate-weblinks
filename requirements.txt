@@ -1,5 +1,4 @@
-nose
-nose-cov
+
 beautifulsoup4
-rejected
-green
+requests
+validators
