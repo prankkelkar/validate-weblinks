@@ -11,7 +11,6 @@ ls = set()
 for link in soup.findAll('a'):
     if(validators.url(link.get("href"))):
         ls.add(link.get("href"))
-ls.add("https://github.com/linux-on-ib222m-z/docs/wiki/Building-PHPweb")
 headers = {
         'Retry-After': '5'
         }
