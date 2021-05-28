@@ -1,4 +1,7 @@
 # Validate Weblinks
+
+[![Python application](https://github.com/prankkelkar/validate-weblinks/actions/workflows/python-app.yml/badge.svg)](https://github.com/prankkelkar/validate-weblinks/actions/workflows/python-app.yml)
+
 It is a small python script that validates all the links present on a Website.
 
 
