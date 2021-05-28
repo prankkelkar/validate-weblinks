@@ -22,5 +22,5 @@ for valid in ls:
           print(" Website '{}' is not available or has status code of  {}".format(valid,requests.get(valid,allow_redirects=True,headers=headers).status_code))
           broken = true
      
-if(!broken):
+if not broken:
     print("All links are still intact")
