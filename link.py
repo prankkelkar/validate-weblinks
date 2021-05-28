@@ -8,6 +8,7 @@ import config
 html_page = urllib.request.urlopen(config.url)
 soup = BeautifulSoup(html_page, "html.parser")
 ls = set()
+broken = false
 for link in soup.findAll('a'):
     if(validators.url(link.get("href"))):
         ls.add(link.get("href"))
@@ -19,4 +20,7 @@ for valid in ls:
       response=requests.get(valid,allow_redirects=True,headers=headers).status_code
       if(requests.get(valid,allow_redirects=True,headers=headers).status_code!=200):
           print(" Website '{}' is not available or has status code of  {}".format(valid,requests.get(valid,allow_redirects=True,headers=headers).status_code))
-      
+          broken = true
+     
+if(!broken):
+    print("All links are still intact")
