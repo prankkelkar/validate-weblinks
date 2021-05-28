@@ -16,7 +16,7 @@ It is a small python script that validates all the links present on a Website.
 
 * Clone the git repository
   ```bash
-  git clone https://github.com/Kriz01/validate-weblinks.git
+  git clone https://github.com/prankkelkar/validate-weblinks.git
   cd validate-weblinks
   ```
 * Make changes to the config.py.</br>
