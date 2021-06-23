@@ -16,11 +16,11 @@ headers = {
         'Retry-After': '5'
         }
 for valid in ls:
-      time.sleep(2)
-      response=requests.get(valid,allow_redirects=True,headers=headers).status_code
-      if(requests.get(valid,allow_redirects=True,headers=headers).status_code!=200):
-          print(" Website '{}' is not available or has status code of  {}".format(valid,requests.get(valid,allow_redirects=True,headers=headers).status_code))
-          broken = True
-     
+    time.sleep(2)
+    response = requests.get(valid, allow_redirects=True, headers=headers).status_code
+    if(requests.get(valid, allow_redirects=True, headers=headers).status_code !=200):
+        print(" Website '{}' is not available or has status code of  {}".format(valid,requests.get(valid, allow_redirects=True, headers=headers).status_code))
+        broken = True
+
 if not broken:
     print("All links are still intact")
